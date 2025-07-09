@@ -12,11 +12,11 @@ header, main, footer{
 
 main{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1 rem 0;
+    grid-template-columns:1fr;
+    grid-gap:1rem;
 }
 
 section{
-    padding: 1rem;
+    padding:1rem;
     background-color: #fff;
 }
