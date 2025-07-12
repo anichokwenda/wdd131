@@ -47,11 +47,11 @@ section {margin: 1rem auto; max-width: 960px; padding: .5rem;}
 figure {background-color:#fff;}
 img { width: 100%; height: auto; margin: .5rem;}
 figcaption {font-size: smaller;}
-/* hover effect */
+
 .hover:hover {box-shadow: 0 0 50px #333;}
-/* rounded corners - boxmodel */
+
 .rocorn {border-radius: 15px 150px;}
-/* simple opacity */
+
 
 .opac {opacity: .5;}
 
@@ -97,7 +97,7 @@ figcaption {font-size: smaller;}
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-gap: 7px;
-	mix-blend-mode: lighten; /* try darken and overlay */
+	mix-blend-mode: lighten;
 	position: absolute;
 	top: 0;
 	width: 100%;
