@@ -23,6 +23,9 @@ main {
     margin: 40px auto;
     padding: 20px;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 .mobile-view {
     display: none;
