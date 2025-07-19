@@ -1,3 +1,9 @@
+:root{
+    --heading-font: "Gloria Hallelujah", sans-serif;
+    --body-font: "Ancizar Serif", serif;
+}
+
+
 body {
     margin: 0;
     padding: 20px;
