@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: blue;
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+.data, .weather {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+}
+
+
+
+
