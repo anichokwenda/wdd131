@@ -33,7 +33,7 @@ body {
 }
 
 .larger-view {
-    display: block;
+    display: grid;
     height: 150px;
     object-fit: cover;
 }

@@ -51,7 +51,7 @@ const temples = [
     dedicated: "2005, August, 7",
     area: 11500,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-5088.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-8213-thumb.jpg"
   },
   {
     templeName: "Manti Utah",
@@ -59,7 +59,7 @@ const temples = [
     dedicated: "1888, May, 21",
     area: 74792,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-45008.jpg"
   },
   {
     templeName: "Payson Utah",
@@ -128,48 +128,48 @@ const temples = [
 
 ];
 
-const main = document.querySelector("main");
-const resGrid = document.querySelector(".res-grid");
+const templesContainer = document.getElementById('temples-container');
 
-if (resGrid){
-  temples.forEach(temple => {
-    let card= document.createElement("section");
-    let name= document.createElement("h3");
-    let location= document.createElement("p");
-    let dedication= document.createElement("p");
-    let area = document.createElementById("p");
-    let img = document.createElement("img");
-
-    name.textContent = temple.templeName;
-    location.innerHTML=`<span class="label">Location:</span> ${temple.location}`;
-    dedication.innerHTML=`<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML=`<span class="label">Size:</span> ${temple.area} aq ft`;
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
-    img.setAttribute("loading", "lazy");
-
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
-    card.appendChild(img);
-    resGrid.appendChild(card);
-
+function displayTemples(templesToDisplay) {
+  console.log('Displaying temples:', templesToDisplay);
+  templesContainer.innerHTML = '';
+  templesToDisplay.forEach(temple => {
+    const templeHTML = `
+      <div class="temple">
+        <h2>${temple.name}</h2>
+        <p>Location: ${temple.location}</p>
+        <p>Dedicated: ${temple.dedicated}</p>
+        <p>Size: ${temple.size} sq ft</p>
+      </div>
+    `;
+    templesContainer.insertAdjacentHTML('beforeend', templeHTML);
   });
 }
-  else{
-    console.error("Element with class 'res-grid' not found.")
-  }
 
+document.getElementById('home').addEventListener('click', () => {
+  displayTemples(temples);
+});
 
+document.getElementById('old').addEventListener('click', () => {
+  console.log('Old button clicked');
+  const oldTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+  displayTemples(oldTemples);
+});
 
+document.getElementById('new').addEventListener('click', () => {
+  const newTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+  displayTemples(newTemples);
+});
 
+document.getElementById('large').addEventListener('click', () => {
+  const largeTemples = temples.filter(temple => temple.size > 90000);
+  displayTemples(largeTemples);
+});
 
+document.getElementById('small').addEventListener('click', () => {
+  const smallTemples = temples.filter(temple => temple.size < 10000);
+  displayTemples(smallTemples);
+});
 
-
-
-
-
-
-
-
+// Display all temples initially
+displayTemples(temples);
