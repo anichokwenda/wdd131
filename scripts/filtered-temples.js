@@ -51,7 +51,7 @@ const temples = [
     dedicated: "2005, August, 7",
     area: 11500,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-5088.jpg"
   },
   {
     templeName: "Manti Utah",
@@ -107,7 +107,7 @@ const temples = [
     dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
-    "https://churchofjesuschristtemples.org/accra-ghana-temple/photographs/"
+    "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-5154.jpg"
   },
   {
     templeName: "Johannesburg South Africa",
@@ -115,7 +115,7 @@ const temples = [
     dedicated: "1985, August, 25",
     area: 19184,
     imageUrl:
-    "https://churchofjesuschristtemples.org/johannesburg-south-africa-temple/photographs/"
+    "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22456.jpg"
   },
   {
     templeName: "Melborne Australia",
@@ -123,7 +123,7 @@ const temples = [
     dedicated: "2000, June, 16",
     area: 10700,
     imageUrl:
-    "https://churchofjesuschristtemples.org/melbourne-australia-temple/photographs/"
+    "https://churchofjesuschhttps://churchofjesuschristtemples.org/assets/img/temples/melbourne-australia-temple/melbourne-australia-temple-58608.jpg"
   },
 
 ];
@@ -132,7 +132,7 @@ const main = document.querySelector("main");
 const resGrid = document.querySelector(".res-grid");
 
 if (resGrid){
-  temples.forEach(temple=>{
+  temples.forEach(temple => {
     let card= document.createElement("section");
     let name= document.createElement("h3");
     let location= document.createElement("p");
