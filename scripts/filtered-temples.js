@@ -131,7 +131,6 @@ const temples = [
 const templesContainer = document.getElementById('temples-container');
 
 function displayTemples(templesToDisplay) {
-  console.log('Displaying temples:', templesToDisplay);
   templesContainer.innerHTML = '';
   templesToDisplay.forEach(temple => {
     const templeHTML = `
@@ -139,36 +138,43 @@ function displayTemples(templesToDisplay) {
         <h2>${temple.name}</h2>
         <p>Location: ${temple.location}</p>
         <p>Dedicated: ${temple.dedicated}</p>
-        <p>Size: ${temple.size} sq ft</p>
+        <p>Area: ${temple.area} sq ft</p>
       </div>
     `;
     templesContainer.insertAdjacentHTML('beforeend', templeHTML);
   });
 }
 
-document.getElementById('home').addEventListener('click', () => {
-  displayTemples(temples);
-});
+// Add event listeners to the navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  console.log('Link clicked:', link.textContent);
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const linkText = link.textContent;
+    let filteredTemples;
 
-document.getElementById('old').addEventListener('click', () => {
-  console.log('Old button clicked');
-  const oldTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
-  displayTemples(oldTemples);
-});
+    switch (linkText) {
+      case 'Home':
+        filteredTemples = temples;
+        break;
+      case 'Old':
+        filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+        break;
+      case 'New':
+        filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+        break;
+      case 'Large':
+        filteredTemples = temples.filter(temple => temple.area > 90000);
+        break;
+      case 'Small':
+        filteredTemples = temples.filter(temple => temple.area < 10000);
+        break;
+      default:
+        filteredTemples = temples;
+    }
 
-document.getElementById('new').addEventListener('click', () => {
-  const newTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
-  displayTemples(newTemples);
-});
-
-document.getElementById('large').addEventListener('click', () => {
-  const largeTemples = temples.filter(temple => temple.size > 90000);
-  displayTemples(largeTemples);
-});
-
-document.getElementById('small').addEventListener('click', () => {
-  const smallTemples = temples.filter(temple => temple.size < 10000);
-  displayTemples(smallTemples);
+    displayTemples(filteredTemples);
+  });
 });
 
 // Display all temples initially
