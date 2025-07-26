@@ -168,17 +168,25 @@ footer p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
 }
 .temple {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display:grid;
+    flex-direction:row;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    align-items:end;
 }
 .temple img{
-    width: 100%;
+    display: grid;
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
+}
+.temple-card{
+    border:1px solid #ddd;
+    padding: 20px;
+    display: grid;
+
 }
 
 
