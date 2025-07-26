@@ -14,12 +14,21 @@
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav class="nav">
+			<div class="nav-brand"></div>
+			<button class="hamburger-btn" onclick="toggleMenu()">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>           
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>      
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>            
+            </ul>
+        </nav>
     </header>
-	<script>
-		function toggleMenu(){
-			document.getElementById("nav-links").classList.toggle("show-menu");
-		};
-	</script>
+	
     <main>
 	    <h2>Home</h2>
 	    <div class="res-grid">
