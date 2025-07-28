@@ -144,6 +144,15 @@ function displayTemples(templesToDisplay) {
     templesContainer.insertAdjacentHTML('beforeend', templeHTML);
   });
 }
+temples.forEach(temple => {
+  const templeHTML=`
+  <div class="image-container">
+    <img src="${temple.imageUrl}" alt="${temple.templeName}">
+    <p>${temple.templeName}</p>
+  </div>
+  `;
+  templesContainer.insertAdjacentHTML('beforeend', templeHTML);
+});
 
 // Add event listeners to the navigation links
 document.querySelectorAll('.nav-links a').forEach(link => {

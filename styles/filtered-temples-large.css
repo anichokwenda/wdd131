@@ -1,20 +1,34 @@
-@media (min-width: 740px) {
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    display: grid;
-    }
+@media (min-width: 768px) and (max-width: 1024px) {
+
     #temples-container{
-    grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:20px;
+    }
+
+    .temple-container {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border: 1px solid;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .temple-container img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .temple-container h2{
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .temple-container p{
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 }
-
 
  nav ul{
         justify-content: flex-end;
@@ -98,97 +112,4 @@ footer {
 footer p {
     margin-bottom: 0.5em;
 }
-
-.res-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-.res-grid section {
-  background-color: #f7f7f7;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.res-grid h3 {
-  font-size: 18px;
-  margin-top: 0;
-}
-
-.res-grid p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.res-grid img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-
-@media (max-width: 768px) {
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    }
-    #temples-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:20px;
-  }
-}
-@media (max-width: 480px){
-    #temples-container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-  .res-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1440px) {
-  .res-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-#temples-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-}
-.temple {
-    display:grid;
-    flex-direction:row;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-    align-items:end;
-}
-.temple img{
-    display: grid;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.temple-card{
-    border:1px solid #ddd;
-    padding: 20px;
-    display: grid;
-
-}
-
 
