@@ -16,21 +16,18 @@
 
 <body>
   <header>
-      <h1>Temple Album</h1>
-      <nav class="nav">
-			<div class="nav-brand"></div>
-			<button class="hamburger-btn" onclick="toggleMenu()">&#9776;</button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#">Home</a></li>           
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>      
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>            
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <script>
+      <h1>Temple Album</h1>  
+      <nav>
+        <button id="home">Home</button>
+        <button id="old">Old</button>
+        <button id="new">New</button>
+        <button id="large">Large</button>
+        <button id="small">Small</button>
+      </nav>
+      <div id="temples-container"></div>
+  </header>
+  <main>
+    <script>
         const temples = [
       {
         templeName: "Aba Nigeria",
@@ -158,8 +155,8 @@
     });
 
     displayTemples(temples);
-    </script>
-    </main>
+  </script>
+  </main>
     <footer>
         <p>&copy;2025 Anisa Chokwenda ● Zimbabwe</p>
         <p>Last modified: <span id="lastModified"></span></p>
