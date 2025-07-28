@@ -9,24 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
 <body>
-  <h1>Temple Album</h1>  
-  <nav>
-    <button id="home">Home</button>
-    <button id="old">Old</button>
-    <button id="new">New</button>
-    <button id="large">Large</button>
-    <button id="small">Small</button>
-  </nav>
-  <div id="temples-container"></div>
- 
-  <script>
-    const temples = [
+  <header>
+      <h1>Temple Album</h1>
+      <nav class="nav">
+			<div class="nav-brand"></div>
+			<button class="hamburger-btn" onclick="toggleMenu()">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>           
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>      
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>            
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <script>
+        const temples = [
       {
         templeName: "Aba Nigeria",
         location: "Aba, Nigeria",
@@ -153,13 +158,12 @@
     });
 
     displayTemples(temples);
-  </script>
+    </script>
+    </main>
   <footer>
-    <p>&copy;<spanid="currentyear"></span>Anisa Chokwenda Zimbabwe</p>
-    <pid="lastModified"></p>
-  </footer>
-</body>
-
+        <p>&copy; <span id="currentyear"></span> Anisa Chokwenda Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
