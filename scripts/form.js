@@ -27,3 +27,7 @@ if (document.title === "Review Confirmation") {
   document.getElementById("review-count").textContent = reviewCount;
 }
 
+document.getElementById("product-review-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
