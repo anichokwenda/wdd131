@@ -29,5 +29,12 @@ if (document.title === "Review Confirmation") {
 
 document.getElementById("product-review-form").addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const reviewCount = localStorage.getItem('reviewCount') ? parseInt(localStorage.getItem('reviewCount')) + 1 : 1;
+  localStorage.setItem('reviewCount', reviewCount);
+  document.getElementById('review-count').textContent = reviewCount;
+  document.getElementById("product-review-form").requestFullscreen();
+  document.getElementById("product-review-form").style.display= "none";
+  document.getElementById("review-confirmation").style.display = "block";
 });
 
