@@ -30,7 +30,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.review-confirmation{
+div[id="review-confirmation"] {
     display: none;
 
 }
@@ -38,7 +38,7 @@ input[type="submit"] {
 footer {
     margin-top: 20px;
     text-align: center;
-    background-color: purple;
+    background-color: lightgrey;
 }
 
 

@@ -4,6 +4,15 @@
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: peru;
+    background-color: lightgrey;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        background-color: lemonchiffon;
+    }
+    footer{
+        background-color: plum;
     }
 }
