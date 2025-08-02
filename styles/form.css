@@ -4,7 +4,6 @@
 }
 
 
-
 body {
     margin: 20px;
     background-color: aquamarine;
@@ -29,6 +28,11 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.review-confirmation{
+    display: none;
+
 }
 
 footer {

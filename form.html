@@ -8,8 +8,7 @@
     <meta name="author" content="Anisa Chokwenda">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Ancizar+Serif&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Ancizar+Serif&display=swap">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/form-large.css">
 </head>
@@ -52,14 +51,14 @@
         <input type="text" id="user-name" name="user-name">
         <input type="submit" value="Post Review">
     </form>
-    <div id="review-confirmation" style="display: none;">
+    <div id="review-confirmation">
         <h1>Review Submitted</h1>
         <p>Thank you for submitting your review!</p>
         <p>Number of reviews submitted: <span id="review-count"></span></p>
     </div>
     <footer>
-        <p>&copy; 2025 Anisa Chokwenda</p>
-        <p>Last Modification: 02/26/2024 13:56:10</p>
+        <p>&copy; <span id="currentyear"></span> Anisa Chokwenda Zimbabwe</p>
+        <p id="lastModified"></p>
     </footer>
     <script src="scripts/form.js" defer></script>
 </body>
