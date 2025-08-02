@@ -1,5 +1,11 @@
+:root{
+    --heading-font: "Gloria Hallelujah", sans-serif;
+    --body-font: "Ancizar Serif", serif;
+}
+
+
+
 body {
-    font-family: Arial, sans-serif;
     margin: 20px;
     background-color: aquamarine;
 }
