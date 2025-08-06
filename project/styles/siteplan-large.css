@@ -1,9 +1,40 @@
 @media (min-width: 768px)  {
 
    main {
-    max-width: 800px;
-    margin: 40px auto;
+    width: 100%;
     padding: 20px;
     background-color: peru;
     }
+    ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    .data, .weather{
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        position: absolute;
+        width: 30%;
+        padding: 50px;
+        border-radius: 30px;
+        margin: 50px;
+        width: fit-content;
+        max-width: 200px;
+    }
+    .data{
+        left: 20px;
+        top: 300px;
+    }
+    .weather{
+        right: 20px;
+        top: 500px;
+    }
+    .hero{
+        width: 100vw;
+        
+    }
+    picture img{
+        width: 100vw;
+        height: 550px;
+    }
+
 }
