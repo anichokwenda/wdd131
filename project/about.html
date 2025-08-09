@@ -19,17 +19,28 @@
 <body>
     <header>
         <img src="images/logo.jpg" alt="Site Logo" class="logo">
-        <h1>HealthFusion Society</h1>
-        <marquee behavior="alternate" direction="right"><br>Join us for the ribbon cutting cermony at 🪲 The Lazy Bug!<br>Friday at 11:00 AM</marquee>
-        <nav>
-            <a href="siteplan.html" target="_blank">Home</a>                                        
-            <a href="about.html" target="_blank">About Us</a>
-            <a href="services.html"target="_blank">Services<a>                                                                                              
-            <a href="contact.html" target="_blank">Contact</a>
-            <a href="events.html " target="_blank">Events</a> 
+        <nav class="nav">
+            <div class="nav-brand"></div>
+            <button class="hamburger-btn"onclick="toggleMenu()">&#9776;</button> 
+            <ul class="nav-links" id="nav-links">
+                <li><a href="siteplan.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="events.html" target="_blank">Events</a></li>
+            </ul>    
         </nav>
     </header>
+    <script>
+		function toggleMenu(){
+			document.getElementById("nav-links").classList.toggle("show-menu");
+		};
+	</script>
     <main>
+        <marquee behavior="alternate" direction="right"><br>Join us enjoy the love of togetherness<br>Open 24 hours</marquee>
+        <h1>About Us</h1>
+        <marquee behavior="alternate" direction="right"><br>Our Mission: At HealthFusion Society, we aim to provide holistic healthcare services that promote physical, emotional and mental well-being.<br>We believe in empowering individuals to take control of their health and live their best lives</marquee>
+       
         <div class="hero">
             <picture>
                 <source srcset="images/naboutus1.jpg" media="(max-width: 500px)">
@@ -39,27 +50,19 @@
 
         </div>
         <div class="content-wrapper">
-            <section class="data">
-                <h2>Data</h2>
+            <section class="our-story">
+                <h2>Our Story</h2>
                 <ul>
-                    <li><strong>Area</strong>: 399,757 sq km</li>
-                    <li><strong>Population:</strong> 16,340,000 million</li>
-                    <li><strong>Capital:</strong> Harare</li>
-                    <li><strong>Languages:</strong> English, Shona, Ndebele</li>
-                    <li><strong>Currency:</strong> Zimbabwean Dollar</li>
-                    <li><strong>Time Zone:</strong> UTC+2</li>
-                    <li><strong>Calling Code:</strong> +263</li>
-                    <li><strong>Internet TLD:</strong> .zw</li>
+                    <li>HealthFusion Society was founded in 2012 by a team of healthcare professionals who shared a vision of providing comprehensive and copassionate care to the community. It has grown to be a leading provider of healthcare services in Zimbabwe.</li>
+                    
                 </ul>
             </section>
-            <section class="weather">
-                <h2>Weather</h2>
-                <img src="images/Weather-icon.svg" alt="Weather-cloud forecast">
+            <section class="our-values">
+                <h2>Our Values</h2>
                 <ul>
-                    <li><strong>Temperature:</strong> 15°C</li>
-                    <li><strong>Conditions:</strong> Partly Cloudy</li>
-                    <li><strong>Wind:</strong> 6 km/h</li>
-                    <li><strong>Wind Chill:</strong> 9.8°C</li>
+                    <li><strong>Compassion:</strong> We deeply care about our clients and strive to provide empathetic and supportive services</li>
+                    <li><strong>Integrity:</strong> We operate with transparency and honesty for the best interest of our clients</li>
+                    <li><strong>Excellence:</strong> We are committed to delivering high-quality services that meet the needs of our clients.</li>
                 </ul>
             </section>
         </div>

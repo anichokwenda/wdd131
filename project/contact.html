@@ -19,26 +19,33 @@
 <body>
     <header>
         <img src="images/logo.jpg" alt="Site Logo" class="logo">
-        <h1>HealthFusion Society</h1>
-        <marquee behavior="alternate" direction="right"><br>Join us for the ribbon cutting cermony at 🪲 The Lazy Bug!<br>Friday at 11:00 AM</marquee>
-        <nav>
-            <a href="siteplan.html" target="_blank">Home</a>                                        
-            <a href="about.html" target="_blank">About Us</a>
-            <a href="services.html"target="_blank">Services<a>                                                                                              
-            <a href="contact.html" target="_blank">Contact</a>
-            <a href="events.html " target="_blank">Events</a> 
+        <nav class="nav">
+            <div class="nav-brand"></div>
+            <button class="hamburger-btn"onclick="toggleMenu()">&#9776;</button> 
+            <ul class="nav-links" id="nav-links">
+                <li><a href="siteplan.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="events.html" target="_blank">Events</a></li>
+            </ul>    
         </nav>
     </header>
+    <script>
+		function toggleMenu(){
+			document.getElementById("nav-links").classList.toggle("show-menu");
+		};
+	</script>
     <main>
+        <marquee behavior="alternate" direction="right"><br>Join us enjoy the love of togetherness<br>Open 24 hours</marquee>
         <div class="contact-info">
-            <h2>Contact Information</h2>
+            <h1>Contact Information</h1>
             <p>Address: 12 Main St, Chegutu, Zimbabwe</p>
             <p>Phone: +263 777 777 777, +263 788 888 788</p>
             <p>Email: <a href="mailto:info@healthfusionsociety.com">info@healthfusionsociety.com</a></p>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30332.43452773173!2d30143757566401952!3d-18138361382303408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2szw!4v1749063794457!5m2!1sen!2szw"
-                width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                class="map-iframe"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15166.450790676048!2d30.130417751045268!3d-18.1356681085127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1936b524bb647597%3A0x29c843f3b4cb0fba!2sChegutu!5e0!3m2!1sen!2szw!4v1754743407477!5m2!1sen!2szw" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                
         </div>
         <section class="contact-form">
             <h2>Get in Touch</h2>
@@ -55,7 +62,7 @@
                     </div>
                     <div>
                         <input type="radio" id="reservation" name="purpose" value="reservation" required>
-                        <label for="reservation">Reservation Questions</label>
+                        <label for="reservation">Questions</label>
                     </div>
                     <div>
                         <input type="radio" id="suggestion" name="purpose" value="suggestion" required>
@@ -73,17 +80,6 @@
     <footer>
         <p>&copy; <span id="currentyear"></span> Anisa Chokwenda Zimbabwe</p>
         <p id="lastModified"></p>
-        <nav class="social-media">
-            <a href="https://facebook.com">
-                <img src="images/1_Facebook_colored_svg_copy-64.webp" alt="Facebook">
-            </a>
-            <a href="https://twitter.com">
-                <img src="images/1_Twitter3_colored_svg-64.webp" alt="Twitter">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/2018_social_media_popular_app_logo_instagram-64.webp" alt="Instagram">
-            </a>
-        </nav>
     </footer>
 </body>
 

@@ -19,24 +19,31 @@
 <body>
     <header>
         <img src="images/logo.jpg" alt="Site Logo" class="logo">
-        <h1>HealthFusion Society</h1>
-        <marquee behavior="alternate" direction="right"><br>Join us for the ribbon cutting cermony at 🪲 The Lazy Bug!<br>Friday at 11:00 AM</marquee>
-        <nav>
-            <a href="siteplan.html" target="_blank">Home</a>                                        
-            <a href="about.html" target="_blank">About Us</a>
-            <a href="services.html"target="_blank">Services<a>                                                                                              
-            <a href="contact.html" target="_blank">Contact</a>
-            <a href="events.html " target="_blank">Events</a> 
+        <nav class="nav">
+            <div class="nav-brand"></div>
+            <button class="hamburger-btn"onclick="toggleMenu()">&#9776;</button> 
+            <ul class="nav-links" id="nav-links">
+                <li><a href="siteplan.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="events.html" target="_blank">Events</a></li>
+            </ul>    
         </nav>
     </header>
+    <script>
+		function toggleMenu(){
+			document.getElementById("nav-links").classList.toggle("show-menu");
+		};
+	</script>
     <main>
-    
+        <h1>HealthFusion Society</h1>
+        <marquee behavior="alternate" direction="right"><br>Join us enjoy the love of togetherness<br>Open 24 hours</marquee>
         <picture>
             <source srcset="images/naboutus1.jpg" media="(max-width: 500px)">
             <source srcset="images/naboutus3.jpg" media="(max-width: 800px)">
             <img src="images/aboutus.jpg" alt="HealthFusion Society">
         </picture>
-        
         
         <section id="site-name">
             <p>HealthFusion Society is a community-driven platform dedicated to providing resources support and education by fusion of physical mental and spiritual wellbeing.</p>
@@ -50,8 +57,8 @@
             <h2>Scenarios</h2>
             <ul>
                 <li>Scenario 1: How can I prioritize self-care and make it a sustainable habit?</li>
-                <li>Scenario 2: what are some benefitds of incorporating mindfulness practices into m dail routine?</li>
-                <li>Scenario 3: How can I manage food cravings and develop a ahealthier relationship with food?</li>
+                <li>Scenario 2: What are some benefits of incorporating mindfulness practices into my daily routine?</li>
+                <li>Scenario 3: How can I manage food cravings and develop a healthier relationship with food?</li>
             </ul>
         </section>
         <section id="wireframe">

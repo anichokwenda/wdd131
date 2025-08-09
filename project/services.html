@@ -19,17 +19,26 @@
 <body>
     <header>
         <img src="images/logo.jpg" alt="Site Logo" class="logo">
-        <h1>HealthFusion Society</h1>
-        <marquee behavior="alternate" direction="right"><br>Join us for the ribbon cutting cermony at 🪲 The Lazy Bug!<br>Friday at 11:00 AM</marquee>
-        <nav>
-            <a href="siteplan.html" target="_blank">Home</a>                                        
-            <a href="about.html" target="_blank">About Us</a>
-            <a href="services.html"target="_blank">Services<a>                                                                                              
-            <a href="contact.html" target="_blank">Contact</a>
-            <a href="events.html " target="_blank">Events</a> 
+        <nav class="nav">
+            <div class="nav-brand"></div>
+            <button class="hamburger-btn"onclick="toggleMenu()">&#9776;</button> 
+            <ul class="nav-links" id="nav-links">
+                <li><a href="siteplan.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="events.html" target="_blank">Events</a></li>
+            </ul>    
         </nav>
     </header>
-     <main>
+    <script>
+		function toggleMenu(){
+			document.getElementById("nav-links").classList.toggle("show-menu");
+		};
+	</script>
+    <main>
+        <marquee behavior="alternate" direction="right"><br>Join us enjoy the love of togetherness<br>Open 24 hours</marquee>
+        <h1>Services</h1>
         <div class="container services">
             <p>Experience a normal living by balancing our physical, emotional and mental health through networking and team building .</p>
         </div>
@@ -65,55 +74,61 @@
                 </div>
             </div>
         </section>
-        <section class="container schedule">
-            <h2>Services Schedule</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th> </th>
-                        <th>Duration</th>
-                        <th> </th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Health Workshops</td>
-                        <th> </th>
-                        <td>2 hours weekly</td>
-                        <th> </th>
-                        <td>$10</td>
-                    </tr>
-                    <tr>
-                        <td>Counselling Services</td>
-                        <th> </th>
-                        <td>30-60 minutes</td>
-                        <th> </th>
-                        <td>$30</td>
-                    </tr>
-                    <tr>
-                        <td>Doctor's appointment</td>
-                        <th> </th>
-                        <td>flexible</td>
-                        <th> </th>
-                        <td>$30</td>
-                    </tr>
-                    <tr>
-                        <td>Community Programs</td>
-                        <th> </th>
-                        <td>flexible</td>
-                        <th> </th>
-                        <td>$10</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="container  call-to-action">
-            <h2>Ready to Book Your Service?</h2>
-            <h2>...</h2>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </section>
+        <h2 class="stdlf">Pictures</h2>
+	    <div class="container stdlf">
+		    <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3IJF13CZuRNBgfQmBFvUBG67iPdB0-duT8FYzd1MYHjwFomkFW6gUgI851AhZBfzkacg&usqp=CAU" loading="lazy" width="250" height="167" alt="Happy Eating">
+			    <figcaption>Happy eating</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8n6zk43wic9vxOuJ0Z2F08cszcH5lqzm2vjjHKMu8wgZ-uT2x9LzI0K6nCgjx5wEgrRE&usqp=CAU" loading="lazy" width="250" height="167" alt="Health, A hidden Puzzle">
+			    <figcaption>Health, A hidden Puzzle</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSptvwKR8FWWWMyHLhcvdx2bJwSTRXk0sjbs_QtDETVrEShLS-pP0GtIPZHWKdBPB4cSQA&usqp=CAU" loading="lazy" width="250" height="167" alt="The joy">
+			    <figcaption>The joy</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB7y4gOvsASmOj0duMZMWlCukjxWe-oJ_aYybiEiMchBdHhDeb1rUixLUcGXw8a8fwCuw&usqp=CAU" loading="lazy" width="250" height="167" alt="Life">
+			    <figcaption>Life</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ2w4XphTjNqjKkEglQQ66qkpX_vn1otnqULHN5JB3kpFTdmvS6VcNxRvK5OPeoHkfvL4&usqp=CAU" loading="lazy" width="250" height="167" alt="Beauty">
+			    <figcaption>Beauty</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_eb_Aav0WarsDvi8l1AsGT-8MmHQKG6RXdtURWP0LaGoXsVF5ObjMAPJg8WfsYeKvIDc&usqp=CAU" loading="lazy" width="250" height="167" alt="Love">
+			    <figcaption>Love</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-XuuQp0r8kiERMTfFadt65fsdcJOiYdC_Tg&s" loading="lazy" width="250" height="167" alt="Calmness">
+			    <figcaption>Calmness</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVhO-86wOyhGq1pECDQifQwAInxwsC5b3cNg&s" loading="lazy" width="250" height="167" alt="Hope">
+			    <figcaption>Hope</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmFwMbSrztGjr93YLigK4s8pAjSjnwTpcNu0wOBbQhyxyCoBcSrRALh1r7eBQ2d5Rm8Ww&usqp=CAU" loading="lazy" width="250" height="167" alt="Workouts">
+			    <figcaption>Workouts</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXA00_JxDZOLQuhqZcz7bHnoU9E2Vm0lD23NlgHf_dowIz8StKy_foQLoL62VxDtZwWSg&usqp=CAU" loading="lazy" width="250" height="167" alt="Smiles">
+			    <figcaption>Smiles</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTln07nPGPSvDiSF3NlgXFOX6Wz3Yf5YgpW_4muEuA5_PLfHGpPjMjvsC4QwfmNX_yjiIo&usqp=CAU" loading="lazy" width="250" height="167" alt="Growth">
+			    <figcaption>Growth</figcaption>
+		    </figure>
+            <figure>
+			    <img class="hover" src="https://news.sanfordhealth.org/wp-content/uploads/2019/01/fruits-and-weights-for-healthy-weight-gain.jpg" loading="lazy" width="250" height="167" alt="Peace">
+			    <figcaption>Peace</figcaption>
+		    </figure>
+        </div>
+        <h2>Ready to Book Your Service?</h2>
+        <h2>...</h2>
+        <a href="contact.html" class="btn">Contact Us</a>
+    
     </main>
    
     <footer>
